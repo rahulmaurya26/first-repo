@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+    
+}
+body{
+    background-color: #d0cccc;
+}
+.top-image {
+    display: flex;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%; 
+    object-fit: cover;    
+    border: 2px solid black;
+    transform: translate(650px);
+}
+.wrapper
+{   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 3px 15px rgba(113, 115, 119, 6);
+    min-height: 50vh;
+    width: 450px;
+    border: 2px solid ;
+    transform: translate(550px,50px);
+    background: transparent;
+    color: black;
+    border-radius: 20px;
+    padding: 30px 40px;
+}
+.wrapper h1
+{
+    font-size: 36px;
+    text-align: center;
+}
+.wrapper .login
+{
+    background: transparent;
+}
+.login input
+{
+    height: 45px;
+    width: 325px;
+    margin: 10px;
+    padding: 0px;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.login input::placeholder
+{
+    color: rgb(80, 79, 79);
+}
+.remember input
+{
+    margin: 10px;
+}
+
+.wrapper .remember 
+{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    margin: -15px 0 15px;
+    margin-top: 5px;
+}
+.remember label input
+{
+    margin-right: 3px;
+}
+.remember a
+{
+    color: black;
+    font-weight: 600;
+    text-decoration: none;
+    justify-content: right;
+}
+.remember a:hover
+{
+    text-decoration: underline; 
+}
+.wrapper .button
+{
+    margin: 10px; 
+    padding: 1px;
+    width: 95%;
+    height: 45px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+    transform: 5s;
+}
+.wrapper .button:hover{
+    background-color:rgb(7, 222, 21);
+}
+.wrapper .register-link
+{
+    font-size: 14.5px;
+    text-align: center;
+    margin-top: 10px;
+}
+.register-link p a
+{
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+}
+.register-link p a:hover
+{
+    text-decoration: underline;
+} 
