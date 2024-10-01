@@ -17,7 +17,7 @@ body{
     border: 2px solid black;
     transform: translate(650px);
 }
-.wrapper
+.uwrapper
 {   
     display: flex;
     justify-content: center;
@@ -32,16 +32,17 @@ body{
     border-radius: 20px;
     padding: 30px 40px;
 }
-.wrapper h1
+.uwrapper h1
 {
     font-size: 36px;
     text-align: center;
 }
-.wrapper .login
+.uwrapper .ulogin
 {
     background: transparent;
 }
-.login input
+
+.ulogin input
 {
     height: 45px;
     width: 325px;
@@ -54,16 +55,16 @@ body{
     font-weight: 600;
     cursor: pointer;
 }
-.login input::placeholder
+.ulogin input::placeholder
 {
     color: rgb(80, 79, 79);
 }
-.remember input
+.uremember input
 {
     margin: 10px;
 }
 
-.wrapper .remember 
+.uwrapper .uremember 
 {
     display: flex;
     justify-content: space-between;
@@ -71,22 +72,178 @@ body{
     margin: -15px 0 15px;
     margin-top: 5px;
 }
-.remember label input
+.uremember label input
 {
     margin-right: 3px;
 }
-.remember a
+.uremember a
 {
     color: black;
     font-weight: 600;
     text-decoration: none;
     justify-content: right;
 }
-.remember a:hover
+.uremember a:hover
 {
     text-decoration: underline; 
 }
-.wrapper .button
+.uwrapper .ubutton
+{
+    margin: 10px; 
+    padding: 1px;
+    width: 95%;
+    height: 45px;
+    background: white;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+    transform: 5s;
+}
+.uwrapper .ubutton:hover{
+    background-color:rgb(7, 222, 21);
+}
+.Ubutton{
+    margin: 10px; 
+    padding: 1px;
+    width: 25%;
+    height: 45px;
+    background-color: aqua;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+    transform: 5s;
+    
+}
+/* .Ubutton:hover{
+    background-color:rgb(239, 91, 17);
+
+} */
+.UAbutton{
+    margin: 10px; 
+    padding: 1px;
+    width: 25%;
+    height: 45px;
+    background-color: floralwhite;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+    transform: 5s;
+    transform: translate(170px);
+}
+.UAbutton:hover{
+    background-color:rgb(244, 36, 13);
+
+}
+
+
+.uwrapper .uregister-link
+{
+    font-size: 14.5px;
+    text-align: center;
+    margin-top: 10px;
+}
+.uregister-link p a
+{
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+}
+.uregister-link p a:hover
+{
+    text-decoration: underline;
+} 
+
+
+
+
+
+.awrapper
+{   
+    display: none;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 3px 15px rgba(113, 115, 119, 6);
+    min-height: 50vh;
+    width: 450px;
+    border: 2px solid ;
+    transform: translate(550px,50px);
+    background: transparent;
+    color: black;
+    overflow: hidden;
+    border-radius: 20px;
+    padding: 30px 40px;
+}
+.awrapper h1
+{
+    font-size: 36px;
+    text-align: center;
+}
+.awrapper .ulogin
+{
+    background: transparent;
+}
+
+.alogin input
+{
+    height: 45px;
+    width: 325px;
+    margin: 10px;
+    padding: 0px;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.alogin input::placeholder
+{
+    color: rgb(80, 79, 79);
+}
+.aremember input
+{
+    margin: 10px;
+}
+
+.awrapper .aremember 
+{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    margin: -15px 0 15px;
+    margin-top: 5px;
+}
+.aremember label input
+{
+    margin-right: 3px;
+}
+.aremember a
+{
+    color: black;
+    font-weight: 600;
+    text-decoration: none;
+    justify-content: right;
+}
+.aremember a:hover
+{
+    text-decoration: underline; 
+}
+.awrapper .abutton
 {
     margin: 10px; 
     padding: 1px;
@@ -102,23 +259,64 @@ body{
     color: #333;
     font-weight: 600;
     transform: 5s;
+} 
+.AUbutton{
+    margin: 10px; 
+    padding: 1px;
+    width: 25%;
+    height: 45px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+    transform: 5s;
 }
-.wrapper .button:hover{
+.Abutton{
+    margin: 10px; 
+    padding: 1px;
+    width: 25%;
+    height: 45px;
+    background-color: rgb(204, 253, 100);
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+    transform: 5s;
+    transform: translate(170px);
+}
+/* .Abutton:hover{
+    background-color:rgb(244, 36, 13);
+
+} */
+.AUbutton:hover{
+    background-color:rgb(254, 15, 163);
+
+}
+.awrapper .abutton:hover{
     background-color:rgb(7, 222, 21);
 }
-.wrapper .register-link
+.awrapper .aregister-link
 {
     font-size: 14.5px;
     text-align: center;
     margin-top: 10px;
 }
-.register-link p a
+.aregister-link p a
 {
     color: black;
     text-decoration: none;
     font-weight: 600;
 }
-.register-link p a:hover
+.aregister-link p a:hover
 {
     text-decoration: underline;
 } 
