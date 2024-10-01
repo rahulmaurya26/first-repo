@@ -11,24 +11,46 @@
         <img src="https://dlcdnwebimgs.asus.com/files/media/3f814cfd-17dc-4427-a319-4835720fe18b/v1/assets/image/proart/article_cover.jpg" alt="Image" class="top-image">
     </div>
 
-    <div class="wrapper">
-        <form class="">
+    <div class="uwrapper" id="user_id">
+        <form id="uform_id">
+            <button type="ulogin" class="Ubutton">USER</button>
+            <button type="button" class="UAbutton" id="open_second_form">ADMIN</button>
             <h1>Login</h1>
-            <div class="login">
+            <div class="ulogin">
                 <input type="text" placeholder="Username" required><br>
                 <input type="password" placeholder="passward" required>
             </div>
-            <div class="remember">
+            <div class="uremember">
                 <label><input type="checkbox">Remember Me</input>
                 <a href="#" >Forget passward</a>
             </label>
             </div>
-            <button type="login" class="button">Login</button>
-            <div class="register-link">
+            <button type="login" class="ubutton">Login</button>
+            <div class="uregister-link">
                 <p>Don't have an account <a href="#">Register</a></p>
             </div>
         </form>
+    </div> 
+    <div class="awrapper" id="admin_id">
+        <form id="aform_id">
+            <button type="ulogin" class="AUbutton" id="open_second_form1">USER</button>
+            <button type="alogin" class="Abutton">ADMIN</button>
+            
+            <h1>Login</h1>
+            <div class="alogin">
+                <input type="text" placeholder="Username" required><br>
+                <input type="password" placeholder="passward" required>
+            </div>
+            <div class="aremember">
+                <label><input type="checkbox">Remember Me</input>
+                <a href="#" >Forget passward</a>
+            </label>
+            </div>
+            <button type="login" class="abutton">Login</button>
+           
+        </form>
         
     </div> 
+    <script src="script.js"></script>
 </body>
 </html>
