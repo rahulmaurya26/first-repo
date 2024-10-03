@@ -6,28 +6,30 @@
     
 }
 body{
+    /* width: 1200px; */
     background-color: #d0cccc;
 }
 .top-image {
+    position: fixed;
     display: flex;
-    width: 200px;
-    height: 200px;
-    border-radius: 50%; 
+    width: 1500px;
+    height: 1000px;
+    /* border-radius: 50%;  */
     object-fit: cover;    
     border: 2px solid black;
-    transform: translate(650px);
 }
 .uwrapper
 {   
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0px 3px 15px rgba(113, 115, 119, 6);
-    min-height: 50vh;
+    box-shadow: 0px 3px 15px rgba(0,0,0, 10);
+    min-height:50vh;
     width: 450px;
     border: 2px solid ;
     transform: translate(550px,50px);
-    background: transparent;
+    /* background: transparent; */
+    backdrop-filter: blur(6px);
     color: black;
     border-radius: 20px;
     padding: 30px 40px;
@@ -78,7 +80,7 @@ body{
 }
 .uremember a
 {
-    color: black;
+    color: rgb(251, 120, 120);
     font-weight: 600;
     text-decoration: none;
     justify-content: right;
@@ -159,7 +161,7 @@ body{
 }
 .uregister-link p a
 {
-    color: black;
+    color: rgb(248, 134, 134);
     text-decoration: none;
     font-weight: 600;
 }
@@ -182,7 +184,7 @@ body{
     width: 450px;
     border: 2px solid ;
     transform: translate(550px,50px);
-    background: transparent;
+    backdrop-filter: blur(6px);
     color: black;
     overflow: hidden;
     border-radius: 20px;
@@ -234,7 +236,7 @@ body{
 }
 .aremember a
 {
-    color: black;
+    color: rgb(255, 124, 124);
     font-weight: 600;
     text-decoration: none;
     justify-content: right;
@@ -320,3 +322,7 @@ body{
 {
     text-decoration: underline;
 } 
+
+
+
+
