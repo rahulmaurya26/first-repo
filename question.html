@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <style>
+        .hidden { display: none; }
+        .question-box { margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+
+<h1>Quiz App</h1>
+
+<div id="quiz-container">
+    <div id="question-container" class="question-box"></div>
+    <div id="options-container"></div>
+    <button id="next-button" class="hidden">Next Question</button>
+</div>
+
+<script>
+    // Questions array
+    const questions = [
+        {
+            question: "What is your favorite color?",
+            options: ["Red", "Blue", "Green", "Yellow"]
+        },
+        {
+            question: "What is your favorite animal?",
+            options: ["Dog", "Cat", "Elephant", "Lion"]
+        },
+        {
+            question: "What is your favorite hobby?",
+            options: ["Reading", "Sports", "Gaming", "Traveling"]
+        }
+    ];
+
+    let currentQuestionIndex = 0;
+
+    const questionContainer = document.getElementById('question-container');
+    const optionsContainer = document.getElementById('options-container');
+    const nextButton = document.getElementById('next-button');
+
+    // Function to load the question
+    function loadQuestion() {
+        const currentQuestion = questions[currentQuestionIndex];
+        
+        // Display the current question
+        questionContainer.textContent = currentQuestion.question;
+
+        // Clear previous options
+        optionsContainer.innerHTML = '';
+
+        // Display options as buttons
+        currentQuestion.options.forEach(option => {
+            const optionButton = document.createElement('button');
+            optionButton.textContent = option;
+            optionButton.classList.add('option-button');
+            optionButton.addEventListener('click', selectOption);
+            optionsContainer.appendChild(optionButton);
+        });
+    }
+
+    // Function to handle option selection
+    function selectOption(e) {
+        const selectedOption = e.target.textContent;
+
+        // You can save the selected option if needed
+        console.log("Selected:", selectedOption);
+
+        // Show the "Next Question" button after an option is selected
+        nextButton.classList.remove('hidden');
+    }
+
+    // Function to go to the next question
+    function nextQuestion() {
+        currentQuestionIndex++;
+
+        // Check if there are more questions
+        if (currentQuestionIndex < questions.length) {
+            loadQuestion();
+            nextButton.classList.add('hidden');  // Hide the "Next" button until the next option is selected
+        } else {
+            showResults();
+        }
+    }
+
+    // Function to show results or end of quiz
+    function showResults() {
+        questionContainer.textContent = "Quiz Complete!";
+        optionsContainer.innerHTML = '<p>Thank you for taking the quiz.</p>';
+        nextButton.classList.add('hidden');
+    }
+
+    // Load the first question when the page loads
+    loadQuestion();
+
+    // Add event listener to the "Next" button
+    nextButton.addEventListener('click', nextQuestion);
+</script>
+
+</body>
+</html>
