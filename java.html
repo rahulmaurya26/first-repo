@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C Tutorial</title>
+    <style>
+        body {
+            background-color: rgb(218, 223, 224);
+        }
+        .tag {
+            margin: 0px;
+            padding: 0px;
+            position: fixed;
+            width: 1530px;
+            height: 55px;
+            background-color: rgb(103, 101, 101);
+            transform: translateY(-20px);
+        }
+        .home {
+            position: fixed;
+            font-size: 17px;
+            transform: translate(10px, -5px);
+            cursor: pointer;
+            background-color: #5a5959;
+        }
+        .home a {
+            transform: translate(10px, 200px);
+            font-size: 25px;
+            text-decoration: none;
+            border-radius: 40px;
+            color: white;
+        }
+        .home a:hover {
+            color: rgb(70, 70, 70);
+        }
+        .icon {
+            width: 25px;
+            height: 30px;
+            position: fixed;
+            font-size: 25px;
+            transform: translate(1250px, -1px);
+            cursor: pointer;
+        }
+        .button {
+            position: fixed;
+            font-size: 30px;
+            transform: translate(1300px, -7px);
+            border-radius: 10px;
+            cursor: pointer;
+            background-color: #5a5959;
+            color: #f8f4f4;
+            background: transparent;
+        }
+        .button a {
+            text-decoration: none;
+            color: white;
+        }
+        .button:hover {
+            background-color: #7dda8c;
+        }
+        .tutorial {
+            position: fixed;
+            overflow: auto;
+            background-color: #f2f4f5;
+            width: 200px;
+            height: 600px;
+            transform: translateY(80px);
+            box-shadow: 0px 3px 15px rgba(0,0,0, 0.1);
+        }
+        .btn {
+            width: 167px;
+            border: none;
+            margin: 10px;
+            padding: 0px;
+            font-size: 20px;
+            text-align: left;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #6d6d6d;
+        }
+        .btn.green {
+            background-color: green;
+            color: white;
+        }
+        .btn.white {
+            background-color: white;
+            color: black;
+        }
+        .content {
+            width: 1200px;
+            height: 600px;
+            position: fixed;
+            overflow-y: auto;
+            box-shadow: 0px 3px 15px rgba(0,0,0, 0.1);
+            transform: translate(250px, 80px);
+            background-color: #fff;
+        }
+        .introduction, .syntax {
+            display: none;
+        }
+    </style>
+</head>
+<body id="body1">
+    <div class="tag"></div>
+
+    <button class="home">
+        <a href="subjectchoose.html"><ion-icon name="home-outline"></ion-icon></a>
+    </button>
+
+    <div class="icon" id="btn1">
+        <span><ion-icon name="moon-outline" class="i" id="iconid"></ion-icon></span>
+    </div>
+
+    <div class="but">
+        <button class="button">
+            <a href="index.html"><ion-icon name="power-outline"></ion-icon></a>
+        </button>
+    </div>
+
+    <div class="tutorial">
+        <h2>JAVA TUTORIAL</h2>
+        <button class="btn" onclick="showSection('introduction')">Introduction</button>
+        <button class="btn" onclick="showSection('syntax')">C Syntax</button>
+        <button class="btn">J Input</button>
+        <button class="btn">J Output</button>
+        <button class="btn"  onclick="showSection('Variables')">C Variables</button>
+        <button class="btn">J Arrays</button>
+        <button class="btn">J Strings</button>
+        <button class="btn">J Data Type</button>
+        <button class="btn">J IF ELSE</button>
+        <button class="btn">J  LOOP</button>
+        <button class="btn">J Inheritance</button>
+        <button class="btn">J Constructer</button>
+        <button class="btn">J Polymorphism</button>
+        <button class="btn">J Switches</button>
+        <button class="btn">J Operators</button>
+        <button class="btn">J Comment</button>
+        <button class="btn">J Constant</button>
+        <button class="btn">J </button>
+        <button class="btn">J Pointer</button>
+        <button class="btn">J Recursive Function</button>
+        <button class="btn">J </button>
+        <button class="btn">J Header Files</button>
+       
+    </div>
+
+    <div class="content" id="content">
+        <div class="introduction" id="introduction">
+            
+        </div>
+        <div class="syntax" id="syntax">
+            
+        </div>
+        <div class="syntax" id="Variables">
+            <h1>variable</h1>
+        </div>
+    </div>
+
+    <script>
+        let btn = document.getElementById("iconid");
+        let body1 = document.getElementById("body1");
+        let currentmode = "rgb(218, 223, 224)";
+        btn.addEventListener("click", () => {
+            if (currentmode === "rgb(218, 223, 224)") {
+                body1.style.backgroundColor = "rgb(84, 83, 83)";
+                btn.style.color = "white";
+                currentmode = "rgb(84, 83, 83)";
+            } else {
+                body1.style.backgroundColor = "rgb(218, 223, 224)";
+                btn.style.color = "black";
+                currentmode = "rgb(218, 223, 224)";
+            }
+        });
+
+        // Function to toggle sections
+        function showSection(sectionId) {
+            let sections = document.querySelectorAll('.content > div');
+            sections.forEach(section => section.style.display = 'none');
+            let selectedSection = document.getElementById(sectionId);
+            if (selectedSection) {
+                selectedSection.style.display = 'block';
+            }
+        }
+        const buttons = document.querySelectorAll('.btn');
+        buttons.forEach(button => {
+            button.addEventListener('click', function () {
+                buttons.forEach(btn => btn.classList.remove('green'));
+                this.classList.add('green');
+            });
+        });
+    </script>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
