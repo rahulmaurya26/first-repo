@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>C Tutorial</title>
     <style>
-        body{
+        body {
             background-color: rgb(218, 223, 224);
         }
-        .tag
-        {
+        .tag {
             margin: 0px;
             padding: 0px;
             position: fixed;
@@ -18,21 +17,21 @@
             background-color: rgb(103, 101, 101);
             transform: translateY(-20px);
         }
-        .home{
+        .home {
             position: fixed;
             font-size: 17px;
-            transform: translate(10px,-5px);
+            transform: translate(10px, -5px);
             cursor: pointer;
             background-color: #5a5959;
         }
-        .home a{
-            transform: translate(10px,200px);
+        .home a {
+            transform: translate(10px, 200px);
             font-size: 25px;
-            text-decoration:none;
+            text-decoration: none;
             border-radius: 40px;
             color: white;
         }
-        .home a:hover{
+        .home a:hover {
             color: rgb(70, 70, 70);
         }
         .icon {
@@ -53,27 +52,24 @@
             color: #f8f4f4;
             background: transparent;
         }
-
         .button a {
             text-decoration: none;
             color: white;
         }
-
         .button:hover {
             background-color: #7dda8c;
         }
-        .tutorial{
+        .tutorial {
             position: fixed;
             overflow: auto;
             background-color: #f2f4f5;
-            width: 400px;
+            width: 200px;
             height: 600px;
             transform: translateY(80px);
-            width: 200px;
             box-shadow: 0px 3px 15px rgba(0,0,0, 0.1);
         }
-        .btn{
-            width: 180px;
+        .btn {
+            width: 167px;
             border: none;
             margin: 10px;
             padding: 0px;
@@ -81,43 +77,42 @@
             text-align: left;
             cursor: pointer;
         }
-        .btn:hover{
+        .btn:hover {
             background-color: #6d6d6d;
         }
         .btn.green {
             background-color: green;
             color: white;
         }
-
         .btn.white {
             background-color: white;
             color: black;
         }
-        .content{
+        .content {
             width: 1200px;
             height: 600px;
             position: fixed;
-            overflow: auto;
+            overflow-y: auto;
             box-shadow: 0px 3px 15px rgba(0,0,0, 0.1);
-            transform: translate(250px,80px);
+            transform: translate(250px, 80px);
             background-color: #fff;
         }
-        .syntax
-        {
+        .introduction, .syntax {
             display: none;
         }
     </style>
 </head>
 <body id="body1">
-    <div class="tag">
+    <div class="tag"></div>
 
-    </div>
     <button class="home">
         <a href="subjectchoose.html"><ion-icon name="home-outline"></ion-icon></a>
     </button>
+
     <div class="icon" id="btn1">
-        <span><ion-icon name="moon-outline" class="i" id="iconid"></ion-icon> </span>
+        <span><ion-icon name="moon-outline" class="i" id="iconid"></ion-icon></span>
     </div>
+
     <div class="but">
         <button class="button">
             <a href="index.html"><ion-icon name="power-outline"></ion-icon></a>
@@ -126,99 +121,73 @@
 
     <div class="tutorial">
         <h2>C TUTORIAL</h2>
-        
-        <button class="btn" onclick="intro()">Introduction</button>
-       <button class="btn" onclick="syntax()">C Syntax</button>
-       <button class="btn">C Input</button>
-       <button class="btn">C Output</button>
-       <button class="btn">C Variavles</button>
-       <button class="btn">C Arrays</button>
-       <button class="btn">C Strings</button>
-       <button class="btn">C Data Typpe</button>
-       <button class="btn">C IF ELSE</button>
-       <button class="btn">C While LOOP</button>
-       <button class="btn">C Do While LOOP</button>
-       <button class="btn">C For LOOP</button>
-       <button class="btn">C boolean</button>
-       <button class="btn">C Switches</button>
-       <button class="btn">C Operators</button>
-       <button class="btn">C Comment</button>
-       <button class="btn">C Constant</button>
-       <button class="btn">C Structre</button>
-       <button class="btn">C Pointer</button>
-       <button class="btn">C 2D Matrix</button>
-       <button class="btn">C 3D matrix</button>
-       <button class="btn">C Recursive function</button>
-       <button class="btn">C Math Function</button>
-       <button class="btn">C Header Files</button>
-
-      
-       
+        <button class="btn" onclick="showSection('introduction')">Introduction</button>
+        <button class="btn" onclick="showSection('syntax')">C Syntax</button>
+        <button class="btn">C Input</button>
+        <button class="btn">C Output</button>
+        <button class="btn"  onclick="showSection('Variables')">C Variables</button>
+        <button class="btn">C Arrays</button>
+        <button class="btn">C Strings</button>
+        <button class="btn">C Data Type</button>
+        <button class="btn">C IF ELSE</button>
+        <button class="btn">C While LOOP</button>
+        <button class="btn">C Do While LOOP</button>
+        <button class="btn">C For LOOP</button>
+        <button class="btn">C Boolean</button>
+        <button class="btn">C Switches</button>
+        <button class="btn">C Operators</button>
+        <button class="btn">C Comment</button>
+        <button class="btn">C Constant</button>
+        <button class="btn">C Structure</button>
+        <button class="btn">C Pointer</button>
+        <button class="btn">C 2D Matrix</button>
+        <button class="btn">C 3D Matrix</button>
+        <button class="btn">C Recursive Function</button>
+        <button class="btn">C Math Function</button>
+        <button class="btn">C Header Files</button>
        
     </div>
+
     <div class="content" id="content">
         <div class="introduction" id="introduction">
-            <h1>hello</h1>
+            
         </div>
         <div class="syntax" id="syntax">
-            <h1>word</h1>
+            
         </div>
-        <!-- <div class="variable">
-            word
-        </div> -->
-        <h2></h2>
+        <div class="syntax" id="Variables">
+            <h1>variable</h1>
+        </div>
     </div>
-    
+
     <script>
-      let btn = document.getElementById("iconid");
+        let btn = document.getElementById("iconid");
         let body1 = document.getElementById("body1");
         let currentmode = "rgb(218, 223, 224)";
         btn.addEventListener("click", () => {
             if (currentmode === "rgb(218, 223, 224)") {
                 body1.style.backgroundColor = "rgb(84, 83, 83)";
-                btn.style.color = "rgb(84, 8, 8)";
-                currentmode = "rgb(84, 83, 83)";
-            }
-            else if (currentmode === "rgb(84, 83, 83)") {
-                body1.style.backgroundColor = "rgb(218, 223, 224)";
-                currentmode = "rgb(218, 223, 224)";
                 btn.style.color = "white";
+                currentmode = "rgb(84, 83, 83)";
+            } else {
+                body1.style.backgroundColor = "rgb(218, 223, 224)";
+                btn.style.color = "black";
+                currentmode = "rgb(218, 223, 224)";
             }
         });
-        function intro(){
-            introduction=document.getElementById("btn");
-        content=document.getElementById("introduction");
-        introduction=document.getElementById("btn");
-        content=document.getElementById("introduction");
-            content.innerText="introduction"; 
-        }
-        function syntax()
-        {
-            introduction=document.getElementById("btn");
-            content=document.getElementById("content");
-            syntax=document.getElementById("syntax");
-            content.innerText="";
-            syntax.style.backgroundColor="red"
-            content.innerText=syntax.h1;
-        }
-    </script>
-    <script>
-        // Get all the buttons
-        const buttons = document.querySelectorAll('.btn');
 
-        // Add click event listener to each button
-        buttons.forEach(button => {
-            button.addEventListener('click', function () {
-                // Remove 'green' class from all buttons (set them to white)
-                buttons.forEach(btn => btn.classList.remove('green'));
-                
-                // Add 'green' class to the clicked button
-                this.classList.add('green');
-                
-            });
-        });
+        // Function to toggle sections
+        function showSection(sectionId) {
+            let sections = document.querySelectorAll('.content > div');
+            sections.forEach(section => section.style.display = 'none');
+            let selectedSection = document.getElementById(sectionId);
+            if (selectedSection) {
+                selectedSection.style.display = 'block';
+            }
+        }
     </script>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
-<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </html>
