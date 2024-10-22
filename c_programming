@@ -185,6 +185,13 @@
                 selectedSection.style.display = 'block';
             }
         }
+        const buttons = document.querySelectorAll('.btn');
+        buttons.forEach(button => {
+            button.addEventListener('click', function () {
+                buttons.forEach(btn => btn.classList.remove('green'));
+                this.classList.add('green');
+            });
+        });
     </script>
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
