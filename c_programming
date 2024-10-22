@@ -40,13 +40,13 @@
             height: 30px;
             position: fixed;
             font-size: 25px;
-            transform: translate(1350px, -1px);
+            transform: translate(1250px, -1px);
             cursor: pointer;
         }
         .button {
             position: fixed;
             font-size: 30px;
-            transform: translate(1409px, -7px);
+            transform: translate(1300px, -7px);
             border-radius: 10px;
             cursor: pointer;
             background-color: #5a5959;
@@ -102,7 +102,10 @@
             transform: translate(250px,80px);
             background-color: #fff;
         }
-
+        .syntax
+        {
+            display: none;
+        }
     </style>
 </head>
 <body id="body1">
@@ -124,8 +127,8 @@
     <div class="tutorial">
         <h2>C TUTORIAL</h2>
         
-        <button class="btn" >Introduction</button>
-       <button class="btn">C Syntax</button>
+        <button class="btn" onclick="intro()">Introduction</button>
+       <button class="btn" onclick="syntax()">C Syntax</button>
        <button class="btn">C Input</button>
        <button class="btn">C Output</button>
        <button class="btn">C Variavles</button>
@@ -157,6 +160,9 @@
         <div class="introduction" id="introduction">
             <h1>hello</h1>
         </div>
+        <div class="syntax" id="syntax">
+            <h1>word</h1>
+        </div>
         <!-- <div class="variable">
             word
         </div> -->
@@ -180,13 +186,20 @@
             }
         });
         function intro(){
-            introduction=document.getElementById('introduction');
-            content=document.getElementById('content');
-            introduction.addEventListener('click',function(){
-                content.style.backgroundColor="black";
-            });
-            
-            
+            introduction=document.getElementById("btn");
+        content=document.getElementById("introduction");
+        introduction=document.getElementById("btn");
+        content=document.getElementById("introduction");
+            content.innerText="introduction"; 
+        }
+        function syntax()
+        {
+            introduction=document.getElementById("btn");
+            content=document.getElementById("content");
+            syntax=document.getElementById("syntax");
+            content.innerText="";
+            syntax.style.backgroundColor="red"
+            content.innerText=syntax.h1;
         }
     </script>
     <script>
