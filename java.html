@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>C Tutorial</title>
+    <title>Java Tutorial</title>
     <style>
         body {
             background-color: rgb(218, 223, 224);
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         }
         .tag {
             margin: 0px;
@@ -65,7 +66,7 @@
             background-color: #f2f4f5;
             width: 200px;
             height: 600px;
-            transform: translateY(80px);
+            transform: translateY(40px);
             box-shadow: 0px 3px 15px rgba(0,0,0, 0.1);
         }
         .btn {
@@ -89,16 +90,34 @@
             color: black;
         }
         .content {
-            width: 1200px;
-            height: 600px;
+            width: 1100px;
+            height: 550px;
             position: fixed;
             overflow-y: auto;
-            box-shadow: 0px 3px 15px rgba(0,0,0, 0.1);
-            transform: translate(250px, 80px);
-            background-color: #fff;
+            box-shadow: 0px 3px 15px rgba(0,0,0, 0);
+            transform: translate(250px, 40px);
+            /* background-color: #fff; */
+            background-color: rgb(218, 223, 224);
         }
-        .introduction, .syntax {
+        .java{
+            display: block;
+        }
+        .introduction, .syntax{
             display: none;
+        }
+
+        .learn
+        {
+            margin-top: 20px;
+            width: 1400px;
+            height: 200px;
+            background-color: #7dda8c;
+        }
+        .program
+        {
+            margin-left: 0px;
+            background-color: rgb(228,223,224);
+            box-shadow: 0px 3px 15px rgba(0,0,0, 0.5);
         }
     </style>
 </head>
@@ -121,6 +140,7 @@
 
     <div class="tutorial">
         <h2>JAVA TUTORIAL</h2>
+        <button class="btn" onclick="showSection('java')"> Java HOME</button>
         <button class="btn" onclick="showSection('introduction')">Introduction</button>
         <button class="btn" onclick="showSection('syntax')">C Syntax</button>
         <button class="btn">J Input</button>
@@ -147,8 +167,34 @@
     </div>
 
     <div class="content" id="content">
+        <div class="java" id="java">
+            <h1 style="font-size: 50px;">JAVA TUTORIAL</h1>
+            <div class="learn">
+                <h1 style="font-size: 40px;">Learn Java</h1>
+                <p style="font-size: 20px;">Java is a popular programming language.<br><br>Java is used to develop mobile apps, web apps, desktop apps, games and much more.</p>
+            </div>
+            <div class="example">
+                <h1 style="font-size: 40px;">Java Example</h1>
+                <div class="program">
+                    <pre style="font-size: 20px; margin: 0px; text-align: left; transform: translateX(-250px); color: #ed2891;" >
+                        public class Main 
+                        {
+                            public static void main(String[] args) 
+                            {
+                              System.out.println("Hello World");
+                            }
+                        }
+                    </pre>
+                </div>
+                <div class="output">
+                    <pre style="font-size: 20px; margin: 0px; text-align: left; transform: translateX(-250px); color: #ed2891;" >
+                        OUTPUT Is :- Hello World
+                    </pre>
+                </div>
+            </div>
+        </div>
         <div class="introduction" id="introduction">
-            
+            <h1>eee</h1>
         </div>
         <div class="syntax" id="syntax">
             
@@ -173,6 +219,10 @@
                 currentmode = "rgb(218, 223, 224)";
             }
         });
+        window.onload=function()
+        {
+            ducoment.getElementById("introduction").click();
+        }
 
         // Function to toggle sections
         function showSection(sectionId) {
